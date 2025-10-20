@@ -3,7 +3,7 @@ import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class req2 {
+public class req12 {
 	private static final DateTimeFormatter DOB_FMT = DateTimeFormatter.ofPattern("yyyyMMdd");
 
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class req2 {
 	int raceYear = today.getYear() + ((today.getMonthValue() >= 10 && today.getDayOfMonth() >= 1) ? 1 : 0);
 		sc.close();
 
-	    LocalDate tday = req1.computeTDay(raceYear);
+	    LocalDate tday = req11.computeTDay(raceYear);
 		LocalDate raceDayShort = tday.plusDays(2);
 		LocalDate raceDayLong = tday.plusDays(3);
 

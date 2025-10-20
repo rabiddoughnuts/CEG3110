@@ -4,7 +4,7 @@ import java.time.Month;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
-public class req1 {
+public class req11 {
 	private static final DateTimeFormatter INPUT_FMT = DateTimeFormatter.ofPattern("yyyyMMdd");
 
 	public static void main(String[] args) {
