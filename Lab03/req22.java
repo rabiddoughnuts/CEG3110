@@ -1,3 +1,9 @@
+// 
+// Deprecated
+// This has beed replaced by req32.java
+// DO NOT USE
+//
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -118,4 +124,3 @@ public class req22 {
 		return false;
 	}
 }
-

@@ -8,14 +8,10 @@ public class req11 {
 	private static final DateTimeFormatter INPUT_FMT = DateTimeFormatter.ofPattern("yyyyMMdd");
 
 	public static void main(String[] args) {
-		String input;
         System.out.print("Enter date (YYYYMMDD): ");
         Scanner sc = new Scanner(System.in);
-        input = sc.next().trim();
+        LocalDate date = LocalDate.parse(sc.next().trim(), INPUT_FMT);
         sc.close();
-
-		LocalDate date;
-		date = LocalDate.parse(input, INPUT_FMT);
 
 		String period = determineRacePeriod(date);
 		System.out.println(period);
@@ -32,11 +28,11 @@ public class req11 {
 
 		if(d.isBefore(superEarly) || d.isAfter(registrationEnd)){
 			return "Registration Not Open";
-		}else if(!d.isBefore(superEarly) && d.isBefore(early)){
+		}else if(d.isBefore(early)){
 			return "Super Early";
-		}else if(!d.isBefore(early) && d.isBefore(baseline)){
+		}else if(d.isBefore(baseline)){
 			return "Early";
-		}else if(!d.isBefore(baseline) && d.isBefore(late)){
+		}else if(d.isBefore(late)){
 			return "Baseline";
 		}else {
 			return "Late";
