@@ -117,10 +117,6 @@ public class req32 {
                 maxNeededIndex = idx;
             }
         }
-        if (entryFields.length <= maxNeededIndex) {
-            // The new entry doesn't have the required fields to compare. Not considered a duplicate.
-            return false;
-        }
 
         // Build the target values using the configured indices.
         String[] target = new String[FIELDS_TO_COMPARE.length];
@@ -132,9 +128,7 @@ public class req32 {
 
         // Process each roster file individually.
         for (File file : files) {
-            if (!file.exists()) {
-                continue; // skip missing files
-            }
+            if (!file.exists()) {   continue; }
 
             try (BufferedReader br = new BufferedReader(new FileReader(file))) {
                 List<String> record = new ArrayList<>();
@@ -159,17 +153,13 @@ public class req32 {
                                 break;
                             }
                         }
-                        if (matches) {
-                            return true; // duplicate found
-                        }
-
+                        if (matches) {  return true; }
                         // Reset buffer to start collecting next record
                         record.clear();
                     }
                 }
             }
         }
-
         return false;
 	}
 }

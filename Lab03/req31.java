@@ -46,7 +46,6 @@ public class req31 {
         String period = req11.determineRacePeriod(dor).trim().toLowerCase();
         int fee = determineFee(raceCategory, period);
         System.out.println("Registration period: " + period + ", Fee: $" + fee);
-
     }
 
     public static int determineFee(String cat, String per) {
