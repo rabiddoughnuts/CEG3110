@@ -93,7 +93,11 @@ public class req22 {
 			System.out.println("Duplicate entry. Not added to roster.");
 		}
 	}
-
+	/*
+	 * This is an outdated version of isDuplicate
+	 * Do not use this version
+	 * Newest version is in req41.java
+	 */
 	private static boolean isDuplicate(String entry) throws IOException {
         File[] files = {new File(_5K_ROSTER_FILE), new File(_10K_ROSTER_FILE), new File(HALF_ROSTER_FILE), new File(FULL_ROSTER_FILE)};
 

@@ -1,3 +1,8 @@
+// 
+// This program replaces req22.java
+// Do not use req22.java when req32.java is available
+//
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -106,6 +111,11 @@ public class req32 {
 		}
 	}
 
+    /*
+	 * This is an outdated version of isDuplicate
+	 * Do not use this version
+	 * Newest version is in req41.java
+	 */
 	private static boolean isDuplicate(String entry) throws IOException {
         // Parse the incoming entry into fields (one field per line)
         String[] entryFields = entry.split("\n");

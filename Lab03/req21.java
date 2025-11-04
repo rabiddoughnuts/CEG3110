@@ -68,6 +68,11 @@ public class req21 {
 		System.out.println(regTs);
 	}
 
+	/*
+	 * This is an outdated version of isDuplicate
+	 * Do not use this version
+	 * Newest version is in req41.java
+	 */
 	private static boolean isDuplicate(String entry) throws IOException {
 		File file = new File(ROSTER_FILE);
 		if (!file.exists()) {
